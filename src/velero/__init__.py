@@ -1,6 +1,9 @@
+"""An amazing sample package!"""
+
+__version__ = "0.1"
+
 from flask import Flask, render_template
 from logging.config import dictConfig
-from . import auth
 from velero.views import dashboard
 from velero.views.settings import settings
 from velero.views.backup import backup_index
@@ -31,21 +34,6 @@ app = Flask(__name__)
 
 app.config.from_object("config")
 app.config["SECRET_KEY"]
-# auth.oidc.init_app(app)
-
-
-# @app.before_request
-# def before_request():
-#     """
-#     Objectivo: Apresentar o username
-#     """
-#     if auth.oidc.user_loggedin:
-#         g.user = auth.oidc.user_getfield("name")
-#         g.email = auth.oidc.user_getfield("email")
-#     else:
-#         g.user = None
-#         g.email = None
-
 
 @app.errorhandler(404)
 def not_found(error):
@@ -56,8 +44,6 @@ def not_found(error):
 def insufficient_permissions(e):
     return render_template("403.html"), 403
 
-
-# app.register_blueprint(auth.profile)
 app.register_blueprint(dashboard.profile)
 app.register_blueprint(settings.profile)
 app.register_blueprint(backup_index.profile)
