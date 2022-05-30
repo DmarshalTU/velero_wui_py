@@ -6,6 +6,6 @@ profile = Blueprint("restore_get", __name__)
 
 @profile.route("/restore/get")
 def index():
-    list = velero("restore get")
+    listq = velero("restore get")
     # current_app.logger.error(f"Backup list: {list}")
-    return jsonify(list)
+    return jsonify(listq)

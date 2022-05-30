@@ -64,4 +64,4 @@ def index():
         backup_list.append(backup_dict)
     
     # current_app.logger.error(f"key {backup_list}")
-    return render_template("backup/index.html", backups=backup_list, user=g.user, page="backup")
+    return render_template("backup/index.html", backups=backup_list, page="backup")

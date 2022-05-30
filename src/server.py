@@ -9,9 +9,10 @@
 from velero import app
 
 if __name__ == '__main__':
-    import bjoern
+    # import bjoern
     host = "0.0.0.0"
-    port = 5000
+    port = 8000
 
-    bjoern.listen(app, host, port)
-    bjoern.run(statsd=...)
+    # bjoern.listen(app, host, port)
+    # bjoern.run(statsd=...)
+    app.run(host=host, port=port, debug=True)

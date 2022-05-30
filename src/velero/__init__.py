@@ -57,7 +57,7 @@ def insufficient_permissions(e):
     return render_template("403.html"), 403
 
 
-app.register_blueprint(auth.profile)
+# app.register_blueprint(auth.profile)
 app.register_blueprint(dashboard.profile)
 app.register_blueprint(settings.profile)
 app.register_blueprint(backup_index.profile)

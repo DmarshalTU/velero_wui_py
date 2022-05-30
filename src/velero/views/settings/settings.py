@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, jsonify
 from velero.utils import velero
 
 profile = Blueprint("settings", __name__)

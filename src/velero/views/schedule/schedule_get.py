@@ -6,6 +6,6 @@ profile = Blueprint("schedule_get", __name__)
 
 @profile.route("/schedule/get")
 def index():
-    list = velero("schedule get")
+    listq = velero("schedule get")
     # current_app.logger.error(f"Backup list: {list}")
-    return jsonify(list)
+    return jsonify(listq)
