@@ -79,11 +79,11 @@
     <script src="{{ url_for('static', filename='libs/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
     <script src="{{ url_for('static', filename='libs/jqvmap/dist/maps/jquery.vmap.usa.js') }}"></script>
     <script src="{{ url_for('static', filename='libs/jqvmap/dist/maps/continents/jquery.vmap.europe.js') }}"></script>
-    <script src="{{ url_for('static', filename='libs/peity/jquery.peity.min.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/toastr/toastr.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/feather/feather.min.js') }}"></script>
     <!-- Tabler Core -->
-    <script src="{{ url_for('static', filename='js/tabler/tabler.min.js') }}"></script>
+    <script src="https://unpkg.com/@tabler/core@latest/dist/js/tabler.min.js"></script>
     {%- block javascript %}{% endblock -%} {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
     <script type="text/javascript">
         toastr.options = {
